@@ -40,8 +40,12 @@ class FirebaseAuthMethods {
   }
 
   // Google signup
+
   Future<void> signInWithGoogle(BuildContext context) async {
     try {
+      // Ensure previous sign-in session is cleared
+      await GoogleSignIn().signOut();
+
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
       // If the user cancels sign-in
@@ -59,13 +63,11 @@ class FirebaseAuthMethods {
           idToken: googleAuth.idToken,
         );
 
-        UserCredential userCredential = await _auth.signInWithCredential(
-          credential,
-        );
+        UserCredential userCredential = await FirebaseAuth.instance
+            .signInWithCredential(credential);
 
         if (userCredential.user != null) {
           if (userCredential.additionalUserInfo!.isNewUser) {
-            // Handle new user logic (e.g., storing user data in Firestore)
             if (kDebugMode) {
               print("New user signed in: ${userCredential.user!.uid}");
             }

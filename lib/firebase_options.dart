@@ -27,7 +27,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        return windows;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -41,46 +44,37 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBaXm3rSnL29IMLHxWpebSpEM-fl4V-wZc',
-    appId: '1:227072994944:web:b5935aee63d04384100065',
-    messagingSenderId: '227072994944',
-    projectId: 'dropmate-84858',
-    authDomain: 'dropmate-84858.firebaseapp.com',
-    storageBucket: 'dropmate-84858.firebasestorage.app',
+    apiKey: 'AIzaSyDE8sA0kiiYyFgHlxZSG9Q3LGOdhEgzSuE',
+    appId: '1:435069780432:web:651ecdd845be2cc16c39d5',
+    messagingSenderId: '435069780432',
+    projectId: 'dropmate-85571',
+    authDomain: 'dropmate-85571.firebaseapp.com',
+    storageBucket: 'dropmate-85571.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB2OzLVXdtChug3QLL_IAJD4uc8H1H4uYI',
-    appId: '1:227072994944:android:3f8a9f41a5d781f7100065',
-    messagingSenderId: '227072994944',
-    projectId: 'dropmate-84858',
-    storageBucket: 'dropmate-84858.firebasestorage.app',
+    apiKey: 'AIzaSyDiMNzfgNkFzSjmNEM9ypausKFt8-lFXgo',
+    appId: '1:435069780432:android:4b4f3ec00cf0814e6c39d5',
+    messagingSenderId: '435069780432',
+    projectId: 'dropmate-85571',
+    storageBucket: 'dropmate-85571.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDHOtpG5yvhOq70WU9XA-8IAW4a_FLlKBY',
-    appId: '1:227072994944:ios:72485c182fd39eb0100065',
-    messagingSenderId: '227072994944',
-    projectId: 'dropmate-84858',
-    storageBucket: 'dropmate-84858.firebasestorage.app',
+    apiKey: 'AIzaSyAjysu0fHnrpp3Zv6fjtL2uj0Mm7jzbKKc',
+    appId: '1:435069780432:ios:81c810e10e27d6826c39d5',
+    messagingSenderId: '435069780432',
+    projectId: 'dropmate-85571',
+    storageBucket: 'dropmate-85571.firebasestorage.app',
     iosBundleId: 'com.example.dropmate',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDHOtpG5yvhOq70WU9XA-8IAW4a_FLlKBY',
-    appId: '1:227072994944:ios:72485c182fd39eb0100065',
-    messagingSenderId: '227072994944',
-    projectId: 'dropmate-84858',
-    storageBucket: 'dropmate-84858.firebasestorage.app',
+    apiKey: 'AIzaSyAjysu0fHnrpp3Zv6fjtL2uj0Mm7jzbKKc',
+    appId: '1:435069780432:ios:81c810e10e27d6826c39d5',
+    messagingSenderId: '435069780432',
+    projectId: 'dropmate-85571',
+    storageBucket: 'dropmate-85571.firebasestorage.app',
     iosBundleId: 'com.example.dropmate',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBaXm3rSnL29IMLHxWpebSpEM-fl4V-wZc',
-    appId: '1:227072994944:web:cd4d66c6185db5f2100065',
-    messagingSenderId: '227072994944',
-    projectId: 'dropmate-84858',
-    authDomain: 'dropmate-84858.firebaseapp.com',
-    storageBucket: 'dropmate-84858.firebasestorage.app',
   );
 }

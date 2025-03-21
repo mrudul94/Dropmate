@@ -1,37 +1,81 @@
 {
   "project_info": {
-    "project_number": "227072994944",
-    "project_id": "dropmate-84858",
-    "storage_bucket": "dropmate-84858.firebasestorage.app"
+    "project_number": "435069780432",
+    "project_id": "dropmate-85571",
+    "storage_bucket": "dropmate-85571.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:227072994944:android:3f8a9f41a5d781f7100065",
+        "mobilesdk_app_id": "1:435069780432:android:4b4f3ec00cf0814e6c39d5",
         "android_client_info": {
           "package_name": "com.mrudul.dropmate"
         }
       },
       "oauth_client": [
         {
-          "client_id": "227072994944-cp0iipi8q85o3e1uprh63pmkb18cfsg7.apps.googleusercontent.com",
+          "client_id": "435069780432-fjblt5qop7jhft2fmi2ps12hbta445v1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB2OzLVXdtChug3QLL_IAJD4uc8H1H4uYI"
+          "current_key": "AIzaSyDiMNzfgNkFzSjmNEM9ypausKFt8-lFXgo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "227072994944-cp0iipi8q85o3e1uprh63pmkb18cfsg7.apps.googleusercontent.com",
+              "client_id": "435069780432-fjblt5qop7jhft2fmi2ps12hbta445v1.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "227072994944-7cje780lj37jr8sp3lb60j78fkr5igkm.apps.googleusercontent.com",
+              "client_id": "435069780432-8kgv5eghchkjvrfecctgj63uq09js51a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dropmate"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435069780432:android:12ffed00274452726c39d5",
+        "android_client_info": {
+          "package_name": "com.mrudul.dropmate_agent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435069780432-v3aj5gdmu37omiomtd2bhvo3foki84rf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mrudul.dropmate_agent",
+            "certificate_hash": "1c81ed67f7272b26d735b015da1f503f75325eb2"
+          }
+        },
+        {
+          "client_id": "435069780432-fjblt5qop7jhft2fmi2ps12hbta445v1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiMNzfgNkFzSjmNEM9ypausKFt8-lFXgo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435069780432-fjblt5qop7jhft2fmi2ps12hbta445v1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "435069780432-8kgv5eghchkjvrfecctgj63uq09js51a.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.example.dropmate"
