@@ -1,13 +1,14 @@
-// import 'package:dartz/dartz.dart';
-// import 'package:dropmate/core/error/failure.dart';
-// import 'package:dropmate/features/auth/domain/entities/user.dart';
+import 'package:dartz/dartz.dart';
+import 'package:dropmate/core/error/failure.dart';
 
-// abstract class AuthRepository {
-//   Future<Either<Failure, UserEntity>> signUpWithEmail(
-//     String email,
-//     String password,
-//   );
-//   Future<Either<Failure, UserEntity>> signInWithGoogle();
-//   Future<Either<Failure, void>> sendEmailVerification();
-//   Future<Either<Failure, void>> signOut();
-// }
+abstract class AuthRepository {
+  Future<Either<Failure, void>> signUpWithEmailAndPassword(
+    String email,
+    String password,
+  );
+  Future<Either<Failure, void>> signInWithGoogle();
+  Future<Either<Failure, void>> loginUserWithEmailAndPassword(
+    String email,
+    String password,
+  );
+}

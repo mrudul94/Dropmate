@@ -1,31 +1,53 @@
-import 'dart:async';
-
-import 'package:dropmate/features/auth/presentation/pages/signup_page.dart';
+import 'package:dropmate/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:dropmate/features/auth/presentation/pages/home_page.dart';
+import 'package:dropmate/features/auth/presentation/pages/sign_in_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SpalshScreen extends StatefulWidget {
-  const SpalshScreen({super.key});
-
+class SplashScreen extends StatefulWidget {
   @override
-  State<SpalshScreen> createState() => _SpalshScreenState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _SpalshScreenState extends State<SpalshScreen> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-   
     super.initState();
-    Timer(Duration(seconds: 5), (){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SignupPage()));
-    });
+    checkUserStatus();
   }
+
+  Future<void> checkUserStatus() async {
+    final auth = FirebaseAuth.instance;
+    User? user = auth.currentUser;
+
+    if (user != null) {
+      await user.reload(); // Refresh user data to check verification
+      user = auth.currentUser; // Get the latest user info
+
+      if (user!.emailVerified) {
+        // Email verified, navigate to HomeScreen
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => HomePage()),
+        );
+      } else {
+        // Email NOT verified, navigate to LoginScreen
+        Navigator.pushReplacement(context, SignInPage.loginroute());
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: SizedBox(
-        height: double.infinity,
-        width: double.infinity,
-        child: Image.asset('assets/welcomePaggeimage.png'))),
+      body: SafeArea(
+        child: SizedBox(
+          height: double.infinity,
+          width: double.infinity,
+          child: Image.asset('assets/welcomePaggeimage.png'),
+        ),
+      ),
     );
   }
 }

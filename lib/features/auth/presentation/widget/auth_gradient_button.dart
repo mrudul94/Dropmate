@@ -3,13 +3,11 @@ import 'package:flutter/material.dart';
 
 class AuthGradientButton extends StatelessWidget {
   final String buttonText;
-  final Future<void> Function()? function;
-  final Future<void> Function()? function2;
+  final VoidCallback onpress;
   const AuthGradientButton({
     super.key,
     required this.buttonText,
-    this.function,
-    this.function2,
+    required this.onpress,
   });
 
   @override
@@ -27,10 +25,7 @@ class AuthGradientButton extends StatelessWidget {
           backgroundColor: Colors.transparent,
           fixedSize: Size(390, 55),
         ),
-        onPressed: () async {
-          if (function != null) await function!();
-          if (function2 != null) await function2!();
-        },
+        onPressed: onpress,
         child: Text(
           buttonText,
           style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600),

@@ -1,6 +1,7 @@
-import 'package:dropmate/features/auth/domain/repository/firebase_auth_methods.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:dropmate/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:dropmate/features/auth/presentation/bloc/auth_event.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class GoogleSigninButton extends StatelessWidget {
   const GoogleSigninButton({super.key});
@@ -10,7 +11,7 @@ class GoogleSigninButton extends StatelessWidget {
     return TextButton(
       child: Text('google'),
       onPressed: () {
-        FirebaseAuthMethods(FirebaseAuth.instance).signInWithGoogle(context);
+        context.read<AuthBloc>().add(SignInWithGoogleRequested());
       },
     );
   }
